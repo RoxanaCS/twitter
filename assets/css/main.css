@@ -41,6 +41,7 @@ section{
   margin-left: 2em;
   border: none;
   border-bottom: 0.1em solid green;
+  overflow: auto;
 }
 .boton{
   font-size: 1em;

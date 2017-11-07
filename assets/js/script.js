@@ -1,5 +1,6 @@
 var botonEnviar = document.getElementById('btn');
 var contador = document.getElementById('count');
+
 /*para que el boton comience deshabilitado llamamos a la funcion creada mas abajo*/
 validarBoton(false);
 /*función para almacenar los comentarios al hacer click*/
@@ -28,6 +29,13 @@ function add(){
 }
 /*funcion para contar los caracteres*/
 function cuenta(){
+  /*rescatar el codigo ascii de las teclas presionadas, ahora sabemos que tecla estamos presionando*/
+    var x = event.keyCode;
+    /*sabemos que la tecla enter tiene número 13*/
+    if(x == 13){
+      document.getElementById('comment').rows = document.getElementById('comment').rows + 1;
+    }
+  /*console.log(x);*/
     document.forms[0].caracteres.value=140-(document.forms[0].comment.value.length);
     /*deshabilitar el boton tweet*/
     if(document.forms[0].comment.value.length > 0){
