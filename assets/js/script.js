@@ -1,4 +1,5 @@
 var botonEnviar = document.getElementById('btn');
+var contador = document.getElementById('count');
 /*para que el boton comience deshabilitado llamamos a la funcion creada mas abajo*/
 validarBoton(false);
 /*función para almacenar los comentarios al hacer click*/
@@ -34,6 +35,25 @@ function cuenta(){
     }
     else {
       validarBoton(false);
+    }
+    if(document.forms[0].comment.value.length > 140){
+      validarBoton(false);
+    }
+    if(document.forms[0].comment.value.length > 120 && document.forms[0].comment.value.length <= 130){
+      contador.classList.add('contadorGreen');
+      contador.classList.remove('contador');
+      contador.classList.remove('contadorRed');
+
+    }
+    else{
+      contador.classList.add('contador');
+      contador.classList.remove('contadorGreen');
+      contador.classList.remove('contadorRed');
+    }
+    if(document.forms[0].comment.value.length > 130){
+      contador.classList.add('contadorRed');
+      contador.classList.remove('contadorGreen');
+      contador.classList.remove('contador');
     }
 }
 /*para deshabilitar o habilitar el boton y cambiarle el color*/
