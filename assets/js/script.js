@@ -1,3 +1,7 @@
+var botonEnviar = document.getElementById('btn');
+/*para que el boton comience deshabilitado llamamos a la funcion creada mas abajo*/
+validarBoton(false);
+/*función para almacenar los comentarios al hacer click*/
 function add(){
   /*almacenar el valor que entrega el usuario en el comentario*/
     var comments = document.getElementById("comment").value;
@@ -13,7 +17,35 @@ function add(){
     var nodoText = document.createTextNode(comments);
     /*metiendo el texto en p*/
     paragraph.appendChild(nodoText);
+    /*agregando el parrafo al nuevo comentario*/
     newComments.appendChild(paragraph);
     /*ahora hay que agregar el newcomments al div cont*/
     cont.appendChild(newComments);
+    /*deshabilitar el boton al hacer postear un tweet*/
+    validarBoton(false);
+    document.forms[0].caracteres.value=140;
+}
+/*funcion para contar los caracteres*/
+function cuenta(){
+    document.forms[0].caracteres.value=140-(document.forms[0].comment.value.length);
+    /*deshabilitar el boton tweet*/
+    if(document.forms[0].comment.value.length > 0){
+      validarBoton(true);
+    }
+    else {
+      validarBoton(false);
+    }
+}
+/*para deshabilitar o habilitar el boton y cambiarle el color*/
+function validarBoton(camposValidos){
+  if (camposValidos == false) {
+      botonEnviar.disabled = true;
+      botonEnviar.classList.add('boton');
+      botonEnviar.classList.remove('boton2');
+  }
+  else {
+      botonEnviar.disabled = false;
+      botonEnviar.classList.add('boton2');
+      botonEnviar.classList.remove('boton');
+      }
 }

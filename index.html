@@ -15,14 +15,13 @@
         <h2>Reto de Código</h2>
       </div>
         <!-- textarea, botón y contenedor de mensajes-->
-      <div class="box2">
-        <textarea class="txt" id="comment" placeholder="¿Qué estás pensando?"></textarea>
-        <button type="button" id="btn" onclick="add()">TWEET</button>
-      </div>
+      <form class="box2">
+        <textarea class="txt" id="comment" placeholder="¿Qué estás pensando?" onKeyDown="cuenta()" onKeyUp="cuenta()"></textarea>
+        <button type="button" id="btn" class="boton" onclick="add()">TWEET</button>
+        <input type="text" name="caracteres" value="140">
+      </form>
       <div id="cont"></div>
-
     </section>
-
     <script src="assets/js/script.js"></script>
   </body>
 </html>
