@@ -1,9 +1,11 @@
 body{
   margin: 0 auto;
-  overflow: hidden;
+  overflow: auto;
+  font-family: 'Montserrat', sans-serif;
 }
 header{
   background-color: #1DA1F2;
+  /*para que ocupe todo el largo*/
   position: fixed;
   width: 100%;
 }
@@ -26,6 +28,7 @@ section{
   width: 30em;
   height: 15em;
   float: left;
+  box-shadow: 0 0 1em #C8CACE;
 }
 .box2{
   background-color: white;
@@ -34,14 +37,26 @@ section{
   width: 30em;
   height: 15em;
   float: left;
+  box-shadow: 0 0 1em #C8CACE;
+}
+h2, h3, h4 {
+  margin-left: 1em;
+}
+h4{
+  color: #007D65;
 }
 .txt{
   width: 30em;
   margin-top: 1em;
   margin-left: 2em;
   border: none;
-  border-bottom: 0.1em solid green;
+  border-bottom: 0.1em solid #007D65;
   overflow: auto;
+}
+.txt:focus {
+  outline: none;
+  border:none;
+  border-bottom: 0.1em solid #007D65;
 }
 .boton{
   font-size: 1em;
@@ -64,18 +79,27 @@ section{
   margin-left: 2em;
   margin-top: 2em;
 }
+.parrafo{
+  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.parrafo2{
+  margin-top: 0.2em;
+  margin-bottom: 0;
+}
 .contador{
   border: none;
-  color: blue;
+  color: #007D65;
   width: 4em;
   margin-left: 16em;
   text-align: center;
   font-weight: bold;
   font-size: 1em;
 }
-.contadorGreen{
+.contadorOrange{
   border: none;
-  color: green;
+  color: orange;
   width: 4em;
   margin-left: 16em;
   text-align: center;
@@ -101,8 +125,4 @@ section{
   background-color: #FFF;
   margin-top: 2em;
   border-radius: 0.3em 0.3em 0.3em 0.3em;
-}
-p{
-  display: inline-block;
-  margin-left: 0.5em;
 }
