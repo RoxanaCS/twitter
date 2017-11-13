@@ -115,5 +115,5 @@ function validarBoton(camposValidos){
       botonEnviar.disabled = false;
       botonEnviar.classList.add('boton2');
       botonEnviar.classList.remove('boton');
-      }
+  }
 }
