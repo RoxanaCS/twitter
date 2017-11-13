@@ -5,11 +5,11 @@ body{
 }
 header{
   background-color: #1DA1F2;
-  /*para que ocupe todo el largo*/
   position: fixed;
-  width: 100%;
+  width: 100%;*/
 }
 h1{
+  box-sizing: inherit;
   text-align: center;
   color: white;
 }
@@ -51,7 +51,7 @@ h4{
   margin-left: 2em;
   border: none;
   border-bottom: 0.1em solid #007D65;
-  overflow: auto;
+  overflow: hidden;
 }
 .txt:focus {
   outline: none;
